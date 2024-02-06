@@ -8,7 +8,11 @@ class Calculation:
     def __init__(self, a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]):
         self.a = a
         self.b = b
-        self.operation = operation  # Store the operation function
+        self.operation = operation  # Store the operation 
+    
+    @staticmethod    
+    def create(a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]):
+        return Calculation(a, b, operation)
 
     def perform(self) -> Decimal:
         """Perform the stored calculation and return the result."""
