@@ -7,6 +7,14 @@ For this homework. what you need to do is to try to make the most complete calcu
 
 2.  Submit a link to your repository to Canvas when your finished.
 
+## To get my code to run / Install Instructions
+
+1.  Clone the repo
+2.  CD into the repo directory
+3.  Create the virtual environment
+4.  Activate the virtual environment
+5.  Install the requirements with pip or pip3 install requirements.txt
+
 **NOTE: YOU NEED TO CHECKOUT BRANCH "PART2" TO SEE THE DETAILED CODE COMMENTS**
 
 Basic tips:
@@ -33,7 +41,7 @@ The advanced calculator in part 3 contains static methods on the Calculator, ins
 **"# pylint: disable=unnecessary-dunder-call, invalid-name"**
 
 
-The objective of this homework assignment is to create your own 
+## The objective of this homework assignment is to create your own 
 
 Your goal in this homeowrk is to design your own calculator from scratch using the techniuqes that you can figure out based on my examples.  Your calculator needs to do the following:
 
@@ -44,7 +52,8 @@ Your goal in this homeowrk is to design your own calculator from scratch using t
 5. It needs to have 100% test coverage, pass pylint, and you need to do your best to not repeat any lines of code.  
 6.  You should use type hints for input parameter types and return types.
 7.  Implement a pytest fixture to test the 
-Grading:
+
+## Grading:
 
 1.  20  Points for (add subtract, multiply, divide) 
 2.  10 Points for exception throwing and testing on divide by zero
