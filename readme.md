@@ -13,7 +13,11 @@ For this homework. what you need to do is to try to make the most complete calcu
 2.  CD into the repo directory
 3.  Create the virtual environment
 4.  Activate the virtual environment
-5.  Install the requirements with pip or pip3 install requirements.txt
+5.  Install the requirements with pip or pip3 install requirements.
+
+### Testing Instructions
+* pytest --num_records=10
+* pytest --pylint --cov 
 
 **NOTE: YOU NEED TO CHECKOUT BRANCH "PART3" TO SEE THE DETAILED CODE COMMENTS**
 
