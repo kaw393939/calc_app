@@ -1,11 +1,35 @@
 # 3 Levels Of Calculator Homework
 
-For this homework. what you need to do is to try to make the most complete calculator that can add, subtract, multiply, divide and store a history of calulations.  The purpose of this assignment is to introduce you understand the principles of object oriented programming, unit testing, and design principles such as SOLID, DRY, GRASP, and Seperation of concerns.  Its important to understand how to properly organize your code using the professional "grammer" of programming and not just the syntax of if statements and loops.
+For this homework. what you need to do is add the following features to **your own** calculator project:
+
+1. Add the "faker" libary with the command "pip install faker" and then do a pip freeze > requirements.txt.  **Tip:  First Deactivate the virtual environment with the command "deactivate" and then activate it again** This is so that you will only add faker to the requirements and that your virtual environent is the current one that your working on when faker is installed.  Review the faker website [here](https://faker.readthedocs.io/en/master/#).  Once you add the library you need to update your tests to use the fake data.  Do a basic implementation first and understand how it works.  Review the faker library documentation, its important that you learn how faker works because it's an invaluable tool for development.
+
+2. Add a new command to pytest to generate  N number of records, so that you can run the following command: **pytest --num_records=100** to generate 100 records.  **The code to do this is in the tests/conftest.py file** and is a little complicated but ask ChatGPT, or me and study it a bit.  Basically what happens is that records are generated and in the background the parameters for a,b,operation, expected result are created and there is a special method to generate test data that is automaticly called when these variables are passed in, so it just keeps calling the test function to test it.  You kinda just need to have a leap of faith that its going to work, since the pytest library is doing all the work in the background.
+
+3. Add a main.py file to serve as an entry point to your program and add the code from my main.py, so that you can have some exception handling to your program.  Review the code in main.py to see how exceptions are caught when bad input is submitted by the user of your program.  
+
+### The command you add will be able to handle the following test cases (see my operations test file):
+* a, b, operation, expected result
+* "5", "3", 'add', "The result of 5 add 3 is equal to 8"
+* "10", "2", 'subtract', "The result of 10 subtract 2 is equal to 8"
+* "4", "5", 'multiply', "The result of 4 multiply 5 is equal to 20"
+* "20", "4", 'divide', "The result of 20 divide 4 is equal to 5"
+* "1", "0", 'divide', "An error occurred: Cannot divide by zero"  
+* "9", "3", 'unknown', "Unknown operation: unknown"  # Test for unknown operation
+* "a", "3", 'add', "Invalid number input: a or 3 is not a valid number."  # Testing invalid number input
+* "5", "b", 'subtract', "Invalid number input: 5 or b is not a valid number." # Testing another invalid number input
+
 
 ## Submission Instructions
-1.  Make a new repo from scratch and set it up like last time, so you can run pytest, pylint, and coverage.  You could even start with a copy of your last repo.
+1.  Use the repo from your previous assignment and update it with the features above.  Use a branch for each feature and get each feature to work and then merge it.  Branch -> complete feature -> merge -> repeat for each feature
 
 2.  Submit a link to your repository to Canvas when your finished.
+
+## Grading:
+
+1.  30 Points - Faker 
+2.  30 Points - Test Data Generation
+3.  40 Points - User Input
 
 ## To get my code to run / Install Instructions
 
@@ -14,12 +38,13 @@ For this homework. what you need to do is to try to make the most complete calcu
 3.  Create the virtual environment
 4.  Activate the virtual environment
 5.  Install the requirements with pip or pip3 install requirements.
+6.  Try out the test data functionality "pytest --num_records=100"
+7.  Try out the user input functionality on the command line: "python main.py 1 2 add"
 
 ### Testing Instructions
 * pytest --num_records=10
 * pytest --pylint --cov 
 
-**NOTE: YOU NEED TO CHECKOUT BRANCH "PART3" TO SEE THE DETAILED CODE COMMENTS**
 
 Basic tips:
 * Don't repeat yourslf #1 rule
@@ -28,41 +53,11 @@ Basic tips:
 
 You should create new branches for each version of your progarm and work from the most simple, which is the first branch (main) and then keep upgrading your program until you have all of the requirements met.  Please don't just copy and paste my final program, or you will not learn anything.  Soon you will have to design your own program without any examples, which will be your mid-term.  I have commented the code with explanations, so you can understand it better.   
 
-In this repository, you can see that there are 3 branches:
-
-1.  Main - Basic Calculator with functions
-2.  Part 2 - Intermediate Calculator with static methods on Calculator class and instance methods on Calculation class to perform operations on the data in the calculation instance.
-3.  Part 3 - Advanced Calculator **Has the detailed comments to read**
 
 ## Instructor Video and Required Readings
 
-1.  Instructor Video - [here](https://youtu.be/YrtBikBdZOE)
-2.  Concept Explanatinos - [here](oopconcepts.md)
-
-## Notes on Advanced Calculator
-The advanced calculator in part 3 contains static methods on the Calculator, instance methods on the Calculation, and class methods on the Calculations class.  In addition, it has more advanced testing that uses parameterized test data and a fixture to make it easy to setup each test with consistent data.  There are also modifciations to the .pylintrc file to control pylint's code analysis and I disable pylint errors in the calculator/calculation.py file by putting this code at the top of the file, which you can also use inside a specific function to disable a pylint check for a specific file.   You sometimes need to disable pylint when you know you are doing the correct thing, but that for some reason pylint doesn't understand.  It's better to disable it at the function or file level than the global level because you never know when you really do want it to tell you the style error.
-
-**"# pylint: disable=unnecessary-dunder-call, invalid-name"**
+1.  Instructor Video 1 Faker and Test Data Generation - [here](https://youtu.be/BhjBKaOXcd8)
+2.  Instructor Video 2 User Input - [here]()
 
 
-## The objective of this homework assignment is to create your own 
 
-Your goal in this homeowrk is to design your own calculator from scratch using the techniuqes that you can figure out based on my examples.  Your calculator needs to do the following:
-
-1. Add, Subtract, Multiply, and Divide
-2. Throw exception for divide by zero and test that the exception is thrown
-3. Use at least one class, at least one static method, at least one class method.
-4. It needs to  store a history of calculations, so that you can retrieve the last calculation, add a calculation, 
-5. It needs to have 100% test coverage, pass pylint, and you need to do your best to not repeat any lines of code.  
-6.  You should use type hints for input parameter types and return types.
-7.  Implement a pytest fixture to test the 
-
-## Grading:
-
-1.  20  Points for (add subtract, multiply, divide) 
-2.  10 Points for exception throwing and testing on divide by zero
-3.  30 points each for using static, class, and instance methods correctly
-4.  5 Points for having a calculation class that stores the arthitmentic operation in a instance property.
-5.  15 Points for having a calculation history to store calculation instances
-6.  10 Points for having the convenience methods on the calculations class to manage the history
-7.  10 Points for using parameterized test data
