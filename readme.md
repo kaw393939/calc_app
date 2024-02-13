@@ -1,4 +1,4 @@
-# 3 Levels Of Calculator Homework
+# Faker, Generating test data, and adding your package to command line app.
 
 For this homework. what you need to do is add the following features to **your own** calculator project:
 
@@ -56,5 +56,9 @@ You should create new branches for each version of your progarm and work from th
 
 ## Instructor Video and Required Readings
 
-1.  Instructor Video 1 Faker and Test Data Generation - [here](https://youtu.be/BhjBKaOXcd8)
-2.  Instructor Video 2 User Input - [here]()
+1.  Instructor Video 1 Faker and Test Data Generation - [here](https://youtu.be/4x6JP0eUVzo)
+2.  [Python Try Accept](https://www.geeksforgeeks.org/python-try-except/)
+3.  [Python Command Line Arg Parsing](https://realpython.com/command-line-interfaces-python-argparse/)
+4.  [Python Faker Library Standard Fake Data Available](https://faker.readthedocs.io/en/stable/providers.html)
+5.  [Using Python Fake and Synthetic Data](https://www.udacity.com/blog/2023/03/creating-fake-data-in-python-using-faker.html)
+6.  [Pytest and Generating Data GOod explanation](https://pytest-with-eric.com/introduction/pytest-generate-tests/)
