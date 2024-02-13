@@ -8,7 +8,7 @@ For this homework. what you need to do is add the following features to **your o
 
 3. Add a main.py file to serve as an entry point to your program and add the code from my main.py, so that you can have some exception handling to your program.  Review the code in main.py to see how exceptions are caught when bad input is submitted by the user of your program.  
 
-### The command you add will be able to handle the following test cases (see my operations test file):
+### The command you add will be able to handle the following test cases (see my test_main.py test file):
 * a, b, operation, expected result
 * "5", "3", 'add', "The result of 5 add 3 is equal to 8"
 * "10", "2", 'subtract', "The result of 10 subtract 2 is equal to 8"
@@ -58,6 +58,3 @@ You should create new branches for each version of your progarm and work from th
 
 1.  Instructor Video 1 Faker and Test Data Generation - [here](https://youtu.be/BhjBKaOXcd8)
 2.  Instructor Video 2 User Input - [here]()
-
-
-
