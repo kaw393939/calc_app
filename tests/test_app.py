@@ -1,5 +1,5 @@
 import pytest
-from app.app import App
+from app import App
 
 def test_app_start_exit_command(capfd, monkeypatch):
     """Test that the REPL exits correctly on 'exit' command."""
