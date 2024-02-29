@@ -1,22 +1,10 @@
-'''
-    This code snippet demonstrates how to define a class in Python that 
-    encapsulates a mathematical calculation, including two operands (a and b) 
-    and an operation (like add or subtract). 
-    The operation parameter is a higher-order function, meaning it takes 
-    functions as arguments or returns them. 
-    This approach leverages Python's first-class functions to create 4
-    flexible and reusable code. The use of Decimal from the decimal 
-    module instead of floating-point numbers is crucial for 
-    financial and scientific calculations that require high precision. 
-    The __repr__ method provides a developer-friendly string representation 
-    of the object, useful for debugging and logging.
-'''
+
 # Import the Decimal class for precise decimal arithmetic
 from decimal import Decimal
 # Import Callable from typing to specify the operation as a callable type hint
 from typing import Callable
 # Import arithmetic operations from a module named calculator.operations
-from calculator.operations import add, subtract, multiply, divide
+from calculator.operations import *
 
 # Definition of the Calculation class with type annotations for improved readability and safety
 class Calculation:
