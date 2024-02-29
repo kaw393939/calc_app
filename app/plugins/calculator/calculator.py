@@ -41,5 +41,5 @@ class Calculator:
         return Calculator._perform_operation(a, b, power)
 
     @staticmethod
-    def root(a: Decimal, b: decimal) -> Decimal:
+    def root(a: Decimal, b: Decimal) -> Decimal:
         return Calculator._perform_operation(a, b, root)

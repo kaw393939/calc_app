@@ -30,8 +30,8 @@ def calculate_and_print(a, b, operation_name):
         'subtract': Calculator.subtract,
         'multiply': Calculator.multiply,
         'divide': Calculator.divide,
-     #   'power': Calculator.power
-     #   'root': Calculator.root
+        'power': Calculator.power,
+        'root': Calculator.root
     }
 
     # Unified error handling for decimal conversion

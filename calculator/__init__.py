@@ -1,7 +1,7 @@
 
 # Import necessary modules and classes
 from calculator.calculations import Calculations  # Manages history of calculations
-from calculator.operations import add, subtract, multiply, divide  # Arithmetic operations
+from calculator.operations import * # Arithmetic operations
 from calculator.calculation import Calculation  # Represents a single calculation
 from decimal import Decimal  # For high-precision arithmetic
 from typing import Callable  # For type hinting callable objects
@@ -37,3 +37,11 @@ class Calculator:
     def divide(a: Decimal, b: Decimal) -> Decimal:
         # Perform division by delegating to the _perform_operation method with the divide operation
         return Calculator._perform_operation(a, b, divide)
+
+    @staticmethod
+    def power(a: Decimal, b: Decimal) -> Decimal:
+        return Calculator._perform_operation(a, b, power)
+
+    @staticmethod
+    def root(a: Decimal, b: Decimal) -> Decimal:
+        return Calculator._perform_operation(a, b, root)
